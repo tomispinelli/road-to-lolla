@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Road to Lolla · El Predio de las Facciones</title>
+  <meta name="description" content="Tu música es tu bandera. Descubrí tu Facción en los 30 días previos a Lollapalooza Argentina 2027. Prototipo académico (UCES).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0B0A0C">
+  <meta property="og:title" content="Road to Lolla · Tu música es tu bandera">
+  <meta property="og:description" content="Cuatro Facciones. 30 días. Un solo Predio. Prototipo académico de narrativa transmedia (UCES, 2026).">
+  <meta property="og:image" content="assets/img/hero.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%230B0A0C'/%3E%3Cpath d='M9 34L7 17l9 7 8-12 8 12 9-7-2 17z' fill='none' stroke='%23D6A53A' stroke-width='3.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800&family=Caveat:wght@500;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- Filtro de trazo de pincel para los títulos grandes -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/>
+    </filter>
+  </svg>
+
+  <!-- ============ ENCABEZADO ============ -->
+  <header class="topbar" id="topbar">
+    <div class="topbar__in">
+      <a class="logo" href="#inicio" aria-label="Road to Lolla, inicio">
+        <span class="logo__road">Road to</span>
+        <span class="logo__lolla">Lolla</span>
+        <svg class="logo__crown" aria-hidden="true"><use href="#i-crown"/></svg>
+      </a>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#facciones" data-nav="facciones">Las Facciones</a>
+        <a href="#predio" data-nav="predio">El Predio</a>
+        <a href="#desafios" data-nav="desafios">Desafíos</a>
+        <a href="#diario" data-nav="diario">Diario</a>
+        <a href="#festival" data-nav="festival">El Festival</a>
+      </nav>
+      <div class="topbar__right">
+        <a class="mybadge" id="myBadge" href="#/barrio" hidden>
+          <span class="mybadge__dot"><svg aria-hidden="true"><use href="#i-flag"/></svg></span>
+          <span><small>Tu bandera</small><b id="myBadgeName">—</b></span>
+        </a>
+        <button class="btn btn--ghost btn--sm" type="button" data-action="tickets">
+          <svg aria-hidden="true"><use href="#i-ticket"/></svg>Comprá tu entrada
+        </button>
+        <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menú">
+          <svg aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav aria-label="Menú">
+      <a href="#facciones">Las Facciones</a>
+      <a href="#predio">El Predio</a>
+      <a href="#desafios">Desafíos</a>
+      <a href="#diario">Diario</a>
+      <a href="#festival">El Festival</a>
+    </nav>
+    <button class="btn btn--primary" type="button" data-action="tickets"><svg aria-hidden="true"><use href="#i-ticket"/></svg>Comprá tu entrada</button>
+  </div>
+
+  <main id="contenido">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__shards" aria-hidden="true">
+        <span class="shard shard--checker"></span>
+        <span class="shard shard--violet"></span>
+        <span class="shard shard--pink"></span>
+        <span class="shard shard--orange"></span>
+        <span class="shard shard--red"></span>
+        <span class="shard shard--blue"></span>
+      </div>
+
+      <div class="hero__in">
+        <div class="hero__copy">
+          <p class="hero__epilogo" id="heroEpilogo" hidden></p>
+          <h1 class="wordmark" id="hero-title">
+            <span class="wordmark__road" data-hero>Road to</span>
+            <span class="wordmark__lolla" data-hero>Lolla<svg class="wordmark__crown" aria-hidden="true"><use href="#i-crown"/></svg></span>
+            <span class="wordmark__arg" data-hero>ARG.</span>
+            <svg class="wordmark__star" aria-hidden="true"><use href="#i-spark"/></svg>
+          </h1>
+          <p class="brush" data-hero><span>Tu música es tu bandera</span></p>
+          <p class="hero__lead" data-hero>En los 30 días previos a Lollapalooza Argentina, lo que escuchás define a qué tribu pertenecés. Descubrí tu Facción, defendela en cada plataforma y llegá al festival con tu bandera.</p>
+          <div class="hero__cta" data-hero>
+            <a class="btn btn--primary btn--lg" href="#/test" id="heroCta" data-primary-cta>
+              <span data-cta-label>Descubrí tu Facción</span><svg aria-hidden="true"><use href="#i-chevron"/></svg>
+            </a>
+            <p class="hero__hint" id="heroHint">5 preguntas · menos de un minuto</p>
+          </div>
+        </div>
+
+        <figure class="hero__photo" data-hero-photo>
+          <img src="assets/img/hero.webp" width="1100" height="1122" alt="De espaldas, una fan levanta una bandera de Road to Lolla frente al escenario y la vuelta al mundo del festival." fetchpriority="high">
+          <figcaption class="ai-tag">Imagen generada con IA</figcaption>
+        </figure>
+      </div>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span>The Indie Tribe</span><i>✶</i><span>The Rock Legends</span><i>✶</i><span>The Perry’s Ravers</span><i>✶</i><span>The Urban Crew</span><i>✶</i><span>12 · 13 · 14 de marzo</span><i>✶</i><span>Hipódromo de San Isidro</span><i>✶</i>
+          <span>The Indie Tribe</span><i>✶</i><span>The Rock Legends</span><i>✶</i><span>The Perry’s Ravers</span><i>✶</i><span>The Urban Crew</span><i>✶</i><span>12 · 13 · 14 de marzo</span><i>✶</i><span>Hipódromo de San Isidro</span><i>✶</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FACCIONES ============ -->
+    <section class="section section--factions" id="facciones" aria-labelledby="fac-title">
+      <div class="wrap">
+        <h2 class="tape" id="fac-title" data-reveal="tape"><span>Las 4 Facciones</span></h2>
+        <p class="section__lead" data-reveal>Cada Facción tiene su barrio, su escudo, su referente y su sonido. Elegís una sola, y podés cambiar de bandera una única vez.</p>
+        <div class="cards" id="factionCards"><!-- se arma desde js --></div>
+      </div>
+    </section>
+
+    <!-- ============ EL PREDIO (MAPA) ============ -->
+    <section class="section section--predio" id="predio" aria-labelledby="predio-title">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="tape tape--pink" id="predio-title" data-reveal="tape"><span>El Predio</span></h2>
+          <p class="week-pill" id="weekPill">Semana 1 de 4</p>
+        </div>
+        <p class="section__lead" data-reveal>Sobre el Hipódromo se levanta una ciudad efímera con un barrio por Facción. Cada miércoles se abre una zona nueva, y los barrios se encienden con la energía de sus integrantes.</p>
+
+        <div class="predio">
+          <div class="predio__map" data-reveal>
+            <svg viewBox="0 0 1000 620" role="group" aria-label="Mapa del Predio con los cuatro barrios y las zonas que se desbloquean" id="mapSvg">
+              <defs>
+                <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+                  <path d="M28 0H0V28" fill="none" stroke="#ffffff" stroke-opacity=".045" stroke-width="1"/>
+                </pattern>
+                <pattern id="checks" width="12" height="12" patternUnits="userSpaceOnUse">
+                  <rect width="12" height="12" fill="#f4f1ea"/><rect width="6" height="6" fill="#0B0A0C"/><rect x="6" y="6" width="6" height="6" fill="#0B0A0C"/>
+                </pattern>
+                <radialGradient id="glow"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+              </defs>
+              <rect width="1000" height="620" fill="#121014"/>
+              <rect width="1000" height="620" fill="url(#grid)"/>
+              <!-- pista del hipódromo -->
+              <ellipse cx="500" cy="305" rx="432" ry="238" fill="none" stroke="#24212A" stroke-width="58"/>
+              <ellipse cx="500" cy="305" rx="452" ry="258" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2" stroke-dasharray="3 14"/>
+              <ellipse cx="500" cy="305" rx="412" ry="218" fill="#17141B" stroke="#fff" stroke-opacity=".18" stroke-width="2" stroke-dasharray="3 14"/>
+              <!-- plaza central -->
+              <g class="plaza" aria-hidden="true">
+                <circle cx="500" cy="305" r="54" fill="#0B0A0C" stroke="#D6A53A" stroke-width="2" stroke-dasharray="6 6"/>
+                <path d="M478 318l-4-26 15 11 11-19 11 19 15-11-4 26z" fill="none" stroke="#D6A53A" stroke-width="3" stroke-linejoin="round"/>
+                <text x="500" y="345" text-anchor="middle" class="map-mini">Plaza de las Banderas</text>
+              </g>
+              <!-- barrios: los arma app.js -->
+              <g id="mapBarrios"></g>
+              <!-- zonas desbloqueables -->
+              <g id="mapZones"></g>
+            </svg>
+          </div>
+
+          <p class="map-hint" aria-hidden="true">Deslizá el mapa para recorrer todo el Predio</p>
+          <aside class="predio__panel" id="mapPanel" aria-live="polite">
+            <p class="kicker">Tocá un barrio o una zona</p>
+            <h3 class="panel__title">El mapa cambia cada semana</h3>
+            <p>Los barrios brillan más cuanta más energía suma su Facción. Las zonas con candado se abren los miércoles.</p>
+          </aside>
+        </div>
+
+        <div class="zone-list" id="zoneList" role="list" aria-label="Barrios y zonas del Predio"></div>
+      </div>
+    </section>
+
+    <!-- ============ MARCADOR ============ -->
+    <section class="section section--score" id="marcador" aria-labelledby="score-title">
+      <div class="tear tear--top" data-tear="19" data-fill="#16131A"></div>
+      <div class="wrap score">
+        <div class="score__board">
+          <h2 class="tape tape--gold" id="score-title" data-reveal="tape"><span>El marcador</span></h2>
+          <ol class="bars" id="scoreBars"></ol>
+          <p class="fineprint">La energía suma con cada aporte válido en TikTok, cada QR escaneado y cada Diario leído. El marcador se congela el 11/3 a las 23:59.</p>
+        </div>
+        <div class="score__goal" data-reveal>
+          <p class="kicker">Meta colectiva</p>
+          <p class="goal__num"><span id="goalNum">0</span><small> / 40.000 banderas</small></p>
+          <div class="goal__bar" role="progressbar" aria-valuemin="0" aria-valuemax="40000" aria-valuenow="0" id="goalBar"><span></span></div>
+          <p id="goalText">Si entre las cuatro Facciones llegan a 40.000 banderas, se abre una sorpresa para todas. Ninguna gana sola.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DESAFÍOS ============ -->
+    <section class="section section--retos" id="desafios" aria-labelledby="reto-title">
+      <div class="wrap retos">
+        <div class="reto" data-reveal>
+          <p class="kicker" id="retoKicker">Reto de la semana 1 · 10/2 al 16/2</p>
+          <h2 class="reto__title" id="reto-title">Mostrá tu bandera</h2>
+          <dl class="reto__bases" id="retoBases"></dl>
+          <button class="btn btn--primary" type="button" data-action="tiktok">
+            <svg aria-hidden="true"><use href="#i-bolt"/></svg><span>Sumá energía en TikTok</span>
+          </button>
+        </div>
+        <div class="clips" id="clips" aria-label="Aportes destacados de la semana"></div>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO PARTICIPAR + CUENTA REGRESIVA ============ -->
+    <section class="section section--how" id="festival" aria-labelledby="how-title">
+      <div class="tear tear--top" data-tear="31" data-fill="#D9D4CA"></div>
+      <div class="wrap how">
+        <div class="how__steps">
+          <h2 class="tape" id="how-title" data-reveal="tape"><span>¿Cómo participar?</span></h2>
+          <ol class="steps">
+            <li data-reveal><svg aria-hidden="true"><use href="#i-test"/></svg><b>1.</b> Hacé el test y descubrí tu Facción.</li>
+            <li class="steps__arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></li>
+            <li data-reveal><svg aria-hidden="true"><use href="#i-share"/></svg><b>2.</b> Compartí tu bandera en redes y sumá energía.</li>
+            <li class="steps__arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></li>
+            <li data-reveal><svg aria-hidden="true"><use href="#i-ticket"/></svg><b>3.</b> Llegá al festival como parte de tu tribu.</li>
+          </ol>
+        </div>
+        <div class="countdown" data-reveal>
+          <p class="countdown__pre" id="cdPre">Quedan</p>
+          <p class="countdown__num"><span id="cdNum">30</span><small id="cdUnit">días</small></p>
+          <svg class="countdown__swash" viewBox="0 0 220 24" aria-hidden="true"><path d="M4 16C40 6 90 4 150 8s50 6 66 4M30 20c40-6 90-7 150-3" fill="none" stroke="#FF2E7E" stroke-width="5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="fest" data-reveal>
+          <p class="fest__name">Lollapalooza<br>Argentina</p>
+          <p class="fest__date">12, 13 y 14 de marzo de 2027<br>Hipódromo de San Isidro</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EL DIARIO ============ -->
+    <section class="section section--diario" id="diario" aria-labelledby="diario-title">
+      <div class="wrap diario">
+        <article class="paper" data-reveal>
+          <header class="paper__mast">
+            <p class="paper__name" id="diario-title">El Diario de las Facciones</p>
+            <p class="paper__meta"><span id="dEd">Edición N.º 1</span><span id="dFecha">Miércoles 10 de febrero de 2027</span></p>
+          </header>
+          <h3 class="paper__title" id="dTitle">Arrancó la previa</h3>
+          <p class="paper__bajada" id="dBajada"></p>
+          <div class="paper__carta">
+            <p class="kicker kicker--ink" id="dCartaKicker">Carta de la semana</p>
+            <blockquote id="dCarta"></blockquote>
+            <p class="paper__firma" id="dFirma"></p>
+            <p class="paper__note">Los referentes son personajes de ficción.</p>
+          </div>
+        </article>
+
+        <div class="subscribe" data-reveal>
+          <h2 class="subscribe__title">Sumate al Diario</h2>
+          <p>Cada miércoles, qué pasó en tu Facción y qué viene. Crónica, carta de tu referente y una pista del Predio.</p>
+          <form class="form" id="subForm" novalidate>
+            <label for="subMail">Tu mail</label>
+            <div class="form__row">
+              <input id="subMail" name="mail" type="email" inputmode="email" autocomplete="email" placeholder="nombre@mail.com" aria-describedby="subMsg subNote" required>
+              <button class="btn btn--primary" type="submit"><span>Sumarme</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+            <p class="form__msg" id="subMsg" role="status"></p>
+            <p class="form__note" id="subNote">Solo te pedimos el mail. Si tenés menos de 18, sumate con el permiso de una persona adulta. Prototipo: no se envía ningún dato.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="footer">
+    <div class="tear tear--top" data-tear="43" data-fill="#D9D4CA"></div>
+    <div class="wrap footer__in">
+      <p class="footer__tag">#RoadToLolla</p>
+      <ul class="socials" aria-label="Redes de la campaña">
+        <li><a href="#" data-action="social" data-net="YouTube" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12a31 31 0 0 0 .4 4.5 3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-4.5 31 31 0 0 0-.4-4.5zM9.75 15.02V8.98L15.5 12z"/></svg></a></li>
+        <li><a href="#" data-action="social" data-net="TikTok" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 1 1 .74-5.07V9.67a5.7 5.7 0 1 0 4.94 5.65V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3a4.3 4.3 0 0 1-3.24-1.48z"/></svg></a></li>
+        <li><a href="#" data-action="social" data-net="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg></a></li>
+        <li><a href="#" data-action="social" data-net="Spotify" aria-label="Spotify"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="currentColor"/><path d="M6.8 9.4c3.6-1 7.7-.6 10.6 1.1M7.4 12.6c3-.8 6.2-.4 8.7 1M8 15.6c2.4-.5 4.8-.2 6.7.8" fill="none" stroke="#0B0A0C" stroke-width="1.7" stroke-linecap="round"/></svg></a></li>
+        <li><a href="#" data-action="social" data-net="X" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-7.6 8.7L23 22h-6.8l-5.3-6.9L4.8 22H1.7l8.1-9.3L1.5 2h7l4.8 6.3zm-1.2 18h1.7L7.4 3.9H5.6z"/></svg></a></li>
+      </ul>
+      <a class="btn btn--ghost" href="#diario"><svg aria-hidden="true"><use href="#i-mail"/></svg>Suscribite al newsletter</a>
+    </div>
+    <div class="wrap footer__legal">
+      <p>
+        <button type="button" class="linkbtn" data-action="hinchada">Código de la Hinchada</button> ·
+        <button type="button" class="linkbtn" data-action="ia">Uso de IA</button> ·
+        <button type="button" class="linkbtn" data-action="reset">Reiniciar prototipo</button>
+      </p>
+      <p>Proyecto académico de Contenidos multiplataforma (UCES, 2026), de Santos, Spinelli y Villordo. No es un sitio oficial de Lollapalooza Argentina: la campaña está planteada como si la firmara el festival.</p>
+    </div>
+  </footer>
+
+  <!-- CTA fijo en el celular -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a class="btn btn--primary btn--block" href="#/test" data-primary-cta tabindex="-1"><span data-cta-label>Descubrí tu Facción</span><svg aria-hidden="true"><use href="#i-chevron"/></svg></a>
+  </div>
+
+  <!-- Control del prototipo: simular los 30 días -->
+  <div class="demo" id="demo">
+    <button class="demo__btn" type="button" id="demoBtn" aria-expanded="false" aria-controls="demoPanel">
+      <svg aria-hidden="true"><use href="#i-sliders"/></svg><span id="demoLabel">Semana 1</span>
+    </button>
+    <div class="demo__panel" id="demoPanel" hidden>
+      <p class="demo__title">Simular la campaña</p>
+      <p class="demo__sub">Mové el tiempo para ver cómo cambian el mapa, el marcador, el reto y el Diario.</p>
+      <div class="demo__steps" id="demoSteps" role="radiogroup" aria-label="Momento de la campaña"></div>
+      <button class="linkbtn" type="button" data-action="reset">Reiniciar el prototipo (para pruebas con usuarios)</button>
+    </div>
+  </div>
+
+  <!-- ============ CAPAS (test, barrio, modales) ============ -->
+  <div class="layer layer--test" id="testLayer" role="dialog" aria-modal="true" aria-labelledby="testQ" hidden>
+    <div class="test">
+      <header class="test__bar">
+        <button class="iconbtn" type="button" id="testBack" aria-label="Pregunta anterior"><svg aria-hidden="true"><use href="#i-back"/></svg></button>
+        <div class="test__progress">
+          <p id="testCount" aria-live="polite">Pregunta 1 de 5</p>
+          <div class="test__track"><span id="testFill"></span></div>
+        </div>
+        <button class="iconbtn" type="button" data-close aria-label="Cerrar el test"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+      </header>
+      <div class="test__body" id="testBody"></div>
+    </div>
+  </div>
+
+  <div class="layer layer--barrio" id="barrioLayer" role="dialog" aria-modal="true" aria-labelledby="barrioName" hidden>
+    <div class="barrio" id="barrio"></div>
+  </div>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__box">
+      <button class="iconbtn modal__x" type="button" data-close aria-label="Cerrar"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/art.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
