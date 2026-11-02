@@ -19,7 +19,7 @@ Es un proyecto académico, no un sitio oficial de Lollapalooza Argentina. No env
 
 ## Cómo verlo
 - **Local:** desde esta carpeta, `python3 -m http.server 8765` y abrir http://127.0.0.1:8765/
-- **Online:** GitHub Pages.
+- **Online:** https://tomispinelli.github.io/road-to-lolla/
 
 ## Archivos
 - `index.html`: estructura y textos fijos.
