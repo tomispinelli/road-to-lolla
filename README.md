@@ -21,6 +21,13 @@ Es un proyecto académico, no un sitio oficial de Lollapalooza Argentina. No env
 - **Local:** desde esta carpeta, `python3 -m http.server 8765` y abrir http://127.0.0.1:8765/
 - **Online:** https://tomispinelli.github.io/road-to-lolla/
 
+## Stack
+- **Front:** HTML5, CSS3 (variables, grid, clip-path, mix-blend-mode para el duotono) y JavaScript sin frameworks.
+- **Animación:** GSAP 3.12.5 + ScrollTrigger y Lenis 1.1.13 para el scroll suave.
+- **Gráficos:** SVG inline (mapa del Predio, íconos, papel rasgado) y Canvas (ilustraciones y tarjeta para compartir).
+- **Tipografías:** Google Fonts (Permanent Marker, Barlow, Barlow Condensed y Caveat).
+- **Hosting:** GitHub Pages.
+
 ## Archivos
 - `index.html`: estructura y textos fijos.
 - `css/styles.css`: estilos (collage, papel rasgado, pincel, duotono).
